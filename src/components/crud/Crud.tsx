@@ -23,6 +23,14 @@ const Crud: FC = () => {
         <img src={item.url} alt='images' />
         <h2 className='text-4xl text-white text-center'>{item.name}</h2>
         <p className='text-xl text-white text-center'>{item.description}</p>
+        <div className='w-full h-auto flex items-center justify-between gap-5'>
+          <button className='w-[50%] h-16 bg-blue-900 text-white rounded-xl text-xl hover:opacity-70'>
+            Edit
+          </button>
+          <button className='w-[50%] h-16 bg-blue-900 text-white rounded-xl text-xl hover:opacity-70'>
+            Delete
+          </button>
+        </div>
       </div>
     )
   )
@@ -56,7 +64,9 @@ const Crud: FC = () => {
             Create
           </button>
         </form>
-        <div className='container mx-auto h-auto grid grid-cols-4 gap-5'>{crud}</div>
+        <div className='container mx-auto h-auto grid grid-cols-4 gap-5'>
+          {crud}
+        </div>
       </div>
     </div>
   )
